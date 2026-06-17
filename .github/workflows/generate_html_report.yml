@@ -27,11 +27,10 @@ jobs:
 
       - name: Generate HTML report
         run: |
-          cd reports
-          python generate_html_report.py
+          python reports/generate_html_report.py
 
       - name: Upload HTML report
         uses: actions/upload-artifact@v4
         with:
           name: html-report
-          path: reports/latest_report.html
+          path: docs/latest_report.html
