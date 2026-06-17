@@ -4,9 +4,9 @@ import os
 from datetime import datetime
 
 def load_latest_snapshot():
-    files = sorted(glob.glob("../data/live_snapshot_*.csv"))
+    files = sorted(glob.glob("data/live_snapshot_*.csv"))
     if not files:
-        raise FileNotFoundError("No snapshot files found in ../data/")
+        raise FileNotFoundError("No snapshot files found in data/")
     return files[-1]
 
 def generate_html(df, snapshot_name):
