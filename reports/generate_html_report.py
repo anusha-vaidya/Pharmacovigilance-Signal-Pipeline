@@ -48,7 +48,7 @@ def main():
     html = generate_html(df, snapshot_name=os.path.basename(snapshot))
 
     os.makedirs(".", exist_ok=True)
-    out_path = "docs/latest_report.html"
+    out_path = "docs/index.html"
     with open(out_path, "w") as f:
         f.write(html)
 
