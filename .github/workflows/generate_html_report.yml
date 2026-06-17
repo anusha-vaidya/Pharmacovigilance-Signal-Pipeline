@@ -25,6 +25,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas
 
+      - name: Create docs folder
+        run: |
+          mkdir -p docs
+
       - name: Generate HTML report
         run: |
           python reports/generate_html_report.py
