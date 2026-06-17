@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 
 def load_latest_snapshot():
-    files = sorted(glob.glob("data/live_snapshot_*.csv"))
+    files = sorted(glob.glob("data/live_snapshot_20260617T181804Z.csv"))
     if not files:
         raise FileNotFoundError("No snapshot files found in data/")
     return files[-1]
